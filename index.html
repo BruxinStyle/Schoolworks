@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina Analítica de Ada Lovelace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>A Máquina Analítica</h1>
+        <p>Descubra como Ada Lovelace usava a Máquina Analítica de Charles Babbage.</p>
+    </header>
+
+    <main>
+        <section id="simulador">
+            <h2>Simulador Interativo</h2>
+            <p>Digite um número para ver o resultado do algoritmo:</p>
+            <input type="number" id="inputNumber" placeholder="Digite um número" />
+            <button onclick="calcular()">Calcular</button>
+            <div id="resultado"></div>
+        </section>
+
+        <section id="cartoesContainer">
+            <h2>Histórico de Cálculos</h2>
+            <button onclick="mostrarHistorico()">Ver Histórico</button>
+            <div id="cartoes"></div>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <button onclick="mostrarCuriosidades()">Mostrar Curiosidades</button>
+            <ul id="listaCuriosidades"></ul>
+        </section>
+    </main>
+
+    <div id="overlay" onclick="fecharHistorico()"></div>
+
+    <div id="historicoModal">
+        <h2>Histórico de Resultados</h2>
+        <ul id="historicoResultados"></ul>
+        <button onclick="fecharHistorico()">Fechar</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Criado por Bruxin</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

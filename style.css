@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #fff3e3;
+    background-color: #3e4a4f;
+    text-align: center;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png'); /* Textura sutil */
+}
+
+header {
+    background-color: #3b3f44;
+    color: #c0a96e;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#simulador, #curiosidades, #cartoesContainer {
+    margin-top: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    background: rgba(245, 245, 240, 0.1);
+    border-radius: 12px;
+    border: 2px solid #c0a96e;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+#simulador:hover, #curiosidades:hover, #cartoesContainer:hover {
+    transform: translateY(-4px);
+}
+
+input[type="number"] {
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #c0a96e;
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+    background-color: #4a5055;
+    color: #eae0c9;
+}
+
+button {
+    padding: 12px 25px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #8a7150;
+    color: #fff3e3;
+    border: 2px solid #4a5055;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0a96e;
+    color: #3b3f44;
+    transform: translateY(-2px);
+}
+
+#resultado {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #c0a96e;
+}
+
+#cartoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao {
+    width: 90px;
+    height: 60px;
+    background: #8a7150;
+    border: 2px solid #3b3f44;
+    color: #fff3e3;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    opacity: 0;
+    position: relative;
+    animation: aparecerCartao 0.5s forwards;
+    border-radius: 4px;
+}
+
+@keyframes aparecerCartao {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+#overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#historicoModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4a5055;
+    color: #eae0c9;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #8a7150;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 350px;
+    text-align: left;
+    display: none;
+}
+
+#historicoModal.visible {
+    display: block;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3b3f44;
+    color: #c0a96e;
+    font-size: 0.9rem;
+}
